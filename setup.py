@@ -1,9 +1,13 @@
 from distutils.core import setup
+import setuptools
 
 setup(
-    name='PyLOD',
-    version='0.1dev',
-    packages=['PyLOD',],
-    license='Creative Commons Attribution-Noncommercial-Share Alike license',
+    name='PyDBOD',
+    version='0.2dev',
+    author="Miguel Ángel López Robles",
+    description="A Distances Based Outlier Detector package",
+    packages=setuptools.find_packages(),
+    url="https://github.com/miki97/TFG-OutlierDetection",
+    license='Licencia pública general de GNU Versión 3',
     long_description=open('README.md').read(),
 )
