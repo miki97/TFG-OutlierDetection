@@ -9,7 +9,8 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import DistanceMetric
 import matplotlib.pyplot as plt
 from sklearn.neighbors import LocalOutlierFactor
-
+from base import base
+'''
 # function to load a data file 
 def load_data(data_file, sep = ','):
     f = open(data_file,'r')
@@ -35,7 +36,6 @@ def lof(data, k=20):
     nbrs = NearestNeighbors(n_neighbors=k, algorithm='ball_tree').fit(data)
     distances, indices = nbrs.kneighbors(data)
 
-    
     n_points = distances.shape[0]
     reach_d = [ [ max( (distances[i, j], distances[indices[i,j],k-1] ) ) for j in range(k) ] for i in range(n_points) ]
     reach_d = np.array(reach_d)
@@ -53,7 +53,7 @@ def lof(data, k=20):
 
     return lof
 
-'''
+
 X = np.array([[-1, -1,-2], [-2, -1,-2], [-3, -2, -2], [1, 1, -2], [2, 1, -2], [3, 2,-2]])
 nbrs = NearestNeighbors(n_neighbors=3, algorithm='ball_tree').fit(X)
 distances, indices = nbrs.kneighbors(X)
@@ -65,14 +65,14 @@ lof(X,3)
 #dist = DistanceMetric.get_metric('euclidean')
 #result = dist.pairwise(X)
 #print(result)
-'''
+
 ###############################
 ## load a file
 
 #data = load_data("shuttle-c0-vs-c4.dat")
 #data = load_data("glass5.dat", sep = ', ')
 #data = load_data("ecoli-0-1-3-7_vs_2-6.dat")
-data = load_data("yeast5.dat", sep = ', ')
+data = load_data("./data/yeast5.dat", sep = ', ')
 ##############################################
 # take coef and see it
 coef = lof(data[:,:-1], 35)
@@ -104,7 +104,7 @@ X = np.r_[X_inliers, X_outliers]
 n_outliers = len(X_outliers)
 ground_truth = np.ones(len(X), dtype=int)
 ground_truth[-n_outliers:] = -1
-'''
+
 # fit the model for outlier detection (default)
 clf = LocalOutlierFactor(n_neighbors=20, contamination=0.1)
 # use fit_predict to compute the predicted labels of the training samples
@@ -117,7 +117,7 @@ n_errors = (y_pred != ground_truth).sum()
 X_scores = clf.negative_outlier_factor_
 print(clf.threshold_)
 print(X_scores)
-'''
+
 
 # use my function
 coef = lof(X,20)
@@ -125,10 +125,10 @@ print(coef)
 
 my_pred = coef > 1.4 
 print(my_pred)
-'''
+
 probedata = clf.fit_predict(data)
 print(clf.threshold_)
-'''
+
 
 plt.title("Local Outlier Factor (LOF)")
 plt.scatter(X[:, 0], X[:, 1], color='k', s=3., label='Data points')
@@ -144,3 +144,33 @@ legend = plt.legend(loc='upper left')
 legend.legendHandles[0]._sizes = [10]
 legend.legendHandles[1]._sizes = [20]
 plt.show()
+
+'''
+
+
+
+class LOF(base):
+    def __init__(self, k=20):
+        self.k = k
+    
+    def fit_predict(self, data):
+        
+        nbrs = NearestNeighbors(n_neighbors= self.k, algorithm='ball_tree').fit(data)
+        distances, indices = nbrs.kneighbors(data)
+
+        n_points = distances.shape[0]
+        reach_d = [ [ max( (distances[i, j], distances[indices[i,j], self.k-1] ) ) for j in range(self.k) ] for i in range(n_points) ]
+        reach_d = np.array(reach_d)
+
+        ave_reach_d = np.mean(reach_d,axis=1)
+        
+        meany = 1 / np.array( [ [ ave_reach_d[i] for i in indices[j]] for j in range(n_points)] )
+        meany = np.mean(meany,axis=1)
+        #print("Mean y in Lx")
+        #print(meany)
+
+        lof = ave_reach_d * meany
+        #print("lof")
+        #print(lof)
+
+        return lof
