@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class base(ABC):
+class Base(ABC):
  
     @abstractmethod
     def __init__(self, value):

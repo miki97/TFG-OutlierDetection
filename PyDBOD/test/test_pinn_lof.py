@@ -40,13 +40,14 @@ coef = pinn_lof.fit_predict(X)
 #print(coef)
 
 
-'''
-probedata = clf.fit_predict(data)
-print(clf.threshold_)
-'''
+y = np.zeros(200,dtype=np.int)
+y_outlier = np.ones(20,dtype=np.int)
+y = np.append(y, y_outlier)
 
-plt.title("Local Outlier Factor (LOF)")
-plt.scatter(X[:, 0], X[:, 1], color='k', s=3., label='Data points')
+color = np.array(['k','b'])
+
+plt.title("Projection-Indexed Nearest-Neighbours (PINN) -LOF")
+plt.scatter(X[:, 0], X[:, 1], color=color[y], s=3., label='Data points')
 # plot circles with radius proportional to the outlier scores
 radius = (coef - coef.min()) / (coef.max() - coef.min())
 plt.scatter(X[:, 0], X[:, 1], s=500 * coef, edgecolors='r',
@@ -78,7 +79,7 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
+plt.title('PINN-LOF')
 plt.legend(loc="lower right")
 plt.show()
 
@@ -90,10 +91,10 @@ os.chdir("..")
 ###############################
 ## load a file
 #############
-#data = load_data("./data/shuttle-c0-vs-c4.dat")  # k = 20
+data = load_data("./data/shuttle-c0-vs-c4.dat")  # k = 20
 #data = load_data("./data/glass5.dat", sep = ', ') #k=19
 #data = load_data("./data/ecoli-0-1-3-7_vs_2-6.dat") #k=25
-data = load_data("./data/yeast5.dat", sep = ', ') #65,65
+#data = load_data("./data/yeast5.dat", sep = ', ') #65,65
 
 
 pinn_lof = PINN_LOF(k=65, h = 65,s = 1)
@@ -115,6 +116,6 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
+plt.title('PINN-LOF')
 plt.legend(loc="lower right")
 plt.show()

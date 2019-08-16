@@ -8,12 +8,12 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import DistanceMetric
 import matplotlib.pyplot as plt
-from base import base
+from PyDBOD.base import Base
 from scipy import stats
 import math
 
 
-class OUTRES(base):
+class OUTRES(Base):
     def __init__(self, epsilon=15, alpha=0.01):
 
         self.epsilon = epsilon## por defecto
@@ -50,7 +50,9 @@ class OUTRES(base):
 
                 test = stats.kstest(self.data[neighbor,s_[j] ], 'uniform')
 
-                if (1 -test[1]) <= self.alpha:
+                
+                if (test[1]) > self.alpha:
+                    
                     uniform = True
                 j = j+1
             
@@ -136,7 +138,7 @@ class OUTRES(base):
         #we use the function OUTRES for all objects
         #print("Hi")
         [self.outres(o, np.array([],dtype= np.int), d) for o in range(self.n)]
-        print(self.r)
+        #print(self.r)
         return self.r
 
 

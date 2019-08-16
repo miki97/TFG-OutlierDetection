@@ -34,22 +34,29 @@ ground_truth = np.ones(len(X), dtype=int)
 ground_truth[-n_outliers:] = -1
 
 
+y = np.zeros(200,dtype=np.int)
+y_outlier = np.ones(20,dtype=np.int)
+y = np.append(y, y_outlier)
+
 # use my class
 lof = LOF()
 coef = lof.fit_predict(X)
+coef = (coef - coef.min()) / (coef.max() - coef.min())
 #print(coef)
 
-
+from PyDBOD.base import Base
 '''
 probedata = clf.fit_predict(data)
 print(clf.threshold_)
 '''
+color = np.array(['k','b'])
+
 
 plt.title("Local Outlier Factor (LOF)")
-plt.scatter(X[:, 0], X[:, 1], color='k', s=3., label='Data points')
+plt.scatter(X[:, 0], X[:, 1], color=color[y], s=3., label='Data points')
 # plot circles with radius proportional to the outlier scores
-radius = (coef - coef.min()) / (coef.max() - coef.min())
-plt.scatter(X[:, 0], X[:, 1], s=500 * coef, edgecolors='r',
+
+plt.scatter(X[:, 0], X[:, 1], s=200 * coef, edgecolors='r',
             facecolors='none', label='Outlier scores')
 plt.axis('tight')
 plt.xlim((-5, 5))
@@ -60,11 +67,12 @@ legend.legendHandles[0]._sizes = [10]
 legend.legendHandles[1]._sizes = [20]
 plt.show()
 
+'''
 y = np.zeros(200)
 y_outlier = np.ones(20)
 y = np.append(y, y_outlier)
 
-
+'''
 fpr, tpr, _ = roc_curve(y,coef)
 roc_auc = auc(fpr, tpr)
 
@@ -78,7 +86,7 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
+plt.title('LOF')
 plt.legend(loc="lower right")
 plt.show()
 
@@ -113,6 +121,6 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
+plt.title('LOF')
 plt.legend(loc="lower right")
 plt.show()

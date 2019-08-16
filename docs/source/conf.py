@@ -13,16 +13,18 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../..'))
-
+print(sys.path)
+sys.path.append("/home/migue/Documentos/wwtfg/TFG-OutlierDetection/PyDBOD")
+from lof import LOF
 
 # -- Project information -----------------------------------------------------
 
-project = 'PyLOD'
+project = 'PyDBOD'
 copyright = '2019, Miguel Ángel López Robles'
 author = 'Miguel Ángel López Robles'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1dev'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------

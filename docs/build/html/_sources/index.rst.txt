@@ -3,17 +3,211 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PyLOD's documentation!
-=================================
+Welcome to PyDBOD's documentation!
+===================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+Introduccion
+=================
+Bienvenido a PyDBOD, la biblioteca de Python para la detección de anomalías usando 
+algoritmos basados en distancias. En esta bibliotica tienes una amplia selección de
+algoritmos los cuales vamos a documentar a continuación. El uso de todos se reduce a
+la creación de un objeto de la clase respectiva y el uso del método **fit_predict**.
 
 
-Indices and tables
+LOF
 ==================
+Local Outlier Factor (LOF), o en español factor de valor atı́pico local, es
+una cuantificación del valor atı́pico de un punto perteneciente al conjunto de
+datos. Esta cuantificación es capaz de ajustar las variaciones en las densidades
+locales.
+
+.. py:function:: LOF(k = 20)
+
+    Constructor para la creación del objeto de la clase LOF.
+
+    :param int: k, número de k vecinos a calcular
+    :rtype: objeto de la clase LOF
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo LOF a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de puntuaciones de anomalía
+
+
+
+
+LOOP
+==================
+Local Outlier Probability (LoOP), esta técnica combina varios conceptos.
+En primer lugar, la idea de localidad, los algoritmos basados en densidad
+como LOF. Por otro lado, LOCI
+con conceptos probabilı́sticos.
+
+.. py:function:: LOOP(k = 20, lamda=3)
+
+    Constructor para la creación del objeto de la clase LOOP.
+
+    :param int: k, número de k vecinos a calcular
+    :param int: lamda, párametro para regular la normalización
+    :rtype: objeto de la clase LOOP
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo LOOP a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de probabilidad anomalia [0-1] 
+
+
+
+
+LDOF
+==================
+Local Outlier Probability (LoOP), utiliza la distancia relativa
+de un objeto a sus vecinos para medir la cantidad de objetos que se desvıían
+de su vecindario disperso.
+
+.. py:function:: LDOF(k = 20)
+
+    Constructor para la creación del objeto de la clase LDOF.
+
+    :param int: k, número de k vecinos a calcular
+    :rtype: objeto de la clase LOOP
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo LDOF a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de puntuaciones de anomalía 
+
+
+
+
+PINN-LOF
+==================
+Projection-Indexed Nearest-Neighbour (PINN), en este algoritmo se
+propone un método de detección de valores atı́picos
+locales proyectivo basado en LOF.
+
+.. py:function:: PINN-LOF(k = 20, t=2, s=1, h=20)
+
+    Constructor para la creación del objeto de la clase PINN-LOF.
+
+    :param int: k, número de k vecinos a calcular
+    :param int: t, probabilidad de seleccion de caracteristicas para la proyección
+    :param int: s, probabilidad de selección para la proyección
+    :param int: h, número de k vecinos a calcular en la proyección
+    :rtype: objeto de la clase PINN-LOF
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo PINN-LOF a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de puntuaciones de anomalía 
+
+
+
+
+
+OUTRES
+==================
+Outres es un algoritmo que propone desarrollar una puntuación de anomalı́as basada
+en la desviación de objetos en las proyecciones subespaciales. Para la selección de 
+dichos subespacios se analiza la uniformidad de los datos en ellos.
+
+.. py:function:: OUTRES(epsilon=15, alpha=0.01)
+
+    Constructor para la creación del objeto de la clase OUTRES.
+
+    :param int: epsilon, radio para la selección del vecindario
+    :param float: alpha, limite de uniformidad que se permite como interesante
+    :rtype: objeto de la clase OUTRES
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo OUTRES a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de puntuaciones de anomalía 
+
+
+ODIN
+==================
+Outlier Detection using Indegree Number (ODIN),es un algoritmo que hace
+uso del grafico de los k-vecinos más cercanos y usa el grado de los nodos
+para el calculo de anomalías
+
+.. py:function:: ODIN(k=20, t=0.01)
+
+    Constructor para la creación del objeto de la clase ODIN.
+
+    :param int: k, número de k vecinos a calcular
+    :param int: t, umbral de dicisión
+    :rtype: objeto de la clase ODIN
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo ODIN a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de decisión 1-0 
+
+
+MeanDIST
+==================
+El algoritmo MeanDIST usa la la media de las distancias en su vecindario
+para ordenar a los vérticesy seleccionar los que más se desvian.
+
+.. py:function:: MeanDIST(k=20, t=1.5)
+
+    Constructor para la creación del objeto de la clase MeanDIST.
+
+    :param int: k, número de k vecinos a calcular
+    :param int: t, parámatro para ampliar o reducir el umbral.
+    :rtype: objeto de la clase MeanDIST
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo MeanDIST a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de decisión 1-0 
+
+
+
+
+KDIST
+==================
+El algoritmo KDIST el máximo de las distancias a
+sus k-vecinos más cercanos para ordenar a los vértices y 
+seleccionar los que más se desvian.
+
+.. py:function:: KDIST(k=20, t=1.5)
+
+    Constructor para la creación del objeto de la clase KDIST.
+
+    :param int: k, número de k vecinos a calcular
+    :param int: t, parámatro para ampliar o reducir el umbral.
+    :rtype: objeto de la clase KDIST
+
+.. py:function:: fit_predict(data)
+
+    Método para aplicar el algoritmo KDIST a una matriz de datos.
+    
+    :param numpy.array: data, matriz de datos
+    :rtype: numpy.array de decisión 1-0 
+
+
+
+.. py:function:: enumerate(sequence[, start=0])
 
 * :ref:`genindex`
 * :ref:`modindex`

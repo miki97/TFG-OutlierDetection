@@ -40,16 +40,18 @@ coef = loop.fit_predict(X)
 #print(coef)
 
 
-'''
-probedata = clf.fit_predict(data)
-print(clf.threshold_)
-'''
+y = np.zeros(200,dtype=np.int)
+y_outlier = np.ones(20,dtype=np.int)
+y = np.append(y, y_outlier)
 
-plt.title("Local Outlier Factor (LOF)")
-plt.scatter(X[:, 0], X[:, 1], color='k', s=3., label='Data points')
+color = np.array(['k','b'])
+
+
+plt.title("Local Outlier Probabilities (LOOP)")
+plt.scatter(X[:, 0], X[:, 1], color=color[y], s=3., label='Data points')
 # plot circles with radius proportional to the outlier scores
 radius = (coef - coef.min()) / (coef.max() - coef.min())
-plt.scatter(X[:, 0], X[:, 1], s=1000 * coef, edgecolors='r',
+plt.scatter(X[:, 0], X[:, 1], s=1500 * coef, edgecolors='r',
             facecolors='none', label='Outlier scores')
 plt.axis('tight')
 plt.xlim((-5, 5))
@@ -78,7 +80,7 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
+plt.title('LOOP')
 plt.legend(loc="lower right")
 plt.show()
 
@@ -111,6 +113,6 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
+plt.title('LOOP')
 plt.legend(loc="lower right")
 plt.show()

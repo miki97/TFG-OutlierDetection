@@ -1,0 +1,31 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter F
+  \item \spxentry{fit\_predict()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{3}, 
+		\hyperpage{5}, \hyperpage{7}, \hyperpage{9}, \hyperpage{11}, \hyperpage{13}, 
+		\hyperpage{15}, \hyperpage{17}
+
+  \indexspace
+  \bigletter K
+  \item \spxentry{KDIST()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{17}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{LDOF()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{7}
+  \item \spxentry{LOF()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{3}
+  \item \spxentry{LOOP()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{5}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{MeanDIST()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{15}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{ODIN()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{13}
+  \item \spxentry{OUTRES()}\spxextra{funci\IeC {\'o}n incorporada}, \hyperpage{11}
+
+\end{sphinxtheindex}

@@ -8,7 +8,7 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import DistanceMetric
 import matplotlib.pyplot as plt
-from base import base
+from PyDBOD.base import Base
 
 '''
 # function to load a data file 
@@ -117,7 +117,7 @@ data = load_data("shuttle-c0-vs-c4.dat")
 '''
 
 
-class LDOF(base):
+class LDOF(Base):
     def __init__(self, k=20, n = 10):
         self.k = k
         self.n = n
