@@ -1,0 +1,9 @@
+PWD /home/migue/Documentos/wwtfg/documentacion/capitulos
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/migue/Documentos/wwtfg/documentacion/capitulos/09_Apendice.tex
+OUTPUT /home/migue/Documentos/wwtfg/documentacion/capitulos/09_Apendice.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm

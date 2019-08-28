@@ -1,0 +1,95 @@
+\chapter{Planificación}
+
+\section{Planificación temporal}
+El proyecto al cual nos enfrentamos tiene una dimensión considerable y
+como hemos visto en los requisitos tenemos varios pasos complejos que
+completar. Por tanto, la planificación debe ser fundamental. Cierto
+es que el proceso de investigación está presente en todas las etapas,
+pero en el siguiente diagrama veremos cómo se ha planificado el tiempo
+para el desarrollo del proyecto
+
+\begin{figure}[h]
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    today=20,
+    today label font=\scriptsize\scshape,
+    title/.style={draw=none, fill=none},
+    title label font=\scshape\footnotesize,
+    title label node/.append style={below=7pt},
+    include title in canvas=false,
+    bar/.append style={draw=none, fill=black!63}
+    ]{1}{20}
+
+
+    \gantttitle{Sep}{2}
+    \gantttitle{Oct}{2}
+    \gantttitle{Nov}{2}
+    \gantttitle{Dic}{2}
+    \gantttitle{Ene}{2}
+    \gantttitle{Feb}{2}
+    \gantttitle{Mar}{2}
+    \gantttitle{Abr}{2}
+    \gantttitle{May}{2}
+    \gantttitle{Jun}{2}
+    \gantttitle{Jul}{2}\\
+
+    \ganttbar{Investigación}{1}{6} \\
+    \ganttbar{Análisis}{4}{8} \\
+    \ganttbar{Diseño}{6}{8} \\
+    \ganttbar{Implementación}{7}{18} \\
+    \ganttbar{Pruebas}{11}{18} \\
+    \ganttbar{Experimentación}{16}{20} \\
+    \ganttbar{Memoria}{16}{20}
+
+\end{ganttchart}
+\caption{Planificación del proyecto}
+\label{fig:gantt}
+\end{figure}
+En este diagrama de Gannt podemos ver que la planificación
+era bastante clara. La primera fase era un proceso de investigación
+y adquisición de una base de conocimientos que permitiera una comprensión
+de los conceptos necesarios para el desarrollo del proyecto. Este proceso
+conlleva un trabajo de inmersión en el campo a través de la lectura de libros
+y artículos. El principal libro usado como referencia ha sido \cite{aggarwalOutlierAnalysis2017}.
+
+A continuación, una etapa más de análisis y diseño de los algoritmos a implementar.
+En esta etapa ya poseíamos una base de conocimientos fuertes para afrontar las especificaciones
+de cada algoritmo. En esta etapa se analiza y se profundiza en los componentes
+y desarrollo de cada algoritmo de nuestra biblioteca
+Por último, tenemos la etapa de implementación, pruebas y experimentación, que 
+en parte se han ido desarrollando en paralelo. En primer lugar, si existe una fase
+de implementación del esquema general que siguen todos nuestros algoritmos y de la
+base de partida. Después, en la implementación de cada algoritmo se prefirió probar
+el funcionamiento tras la implementación de este. 
+
+Como podemos ver existe un alto solapamiento entre las distintas etapas. Esto
+se debe a que no se ha desarrollado con una metodología típicamente en cascada,
+sino que se ha usado una metodología iterativa donde se iban realizando las 
+fases de análisis, implementación y prueba de cada algoritmo hasta confirmar
+su correcto funcionamiento. Una vez que se tenía un algoritmo listo se pasaba al
+siguiente. De este modo podíamos profundizar mejor en la investigación y en los 
+conceptos de cada algoritmo.
+
+Por último, mencionar la etapa de desarrollo de la memoria donde se ha realizando
+un trabajo de recopilación y de exposición de todo el trabajo que se ha realizado
+durante este periodo de trabajo.
+
+
+\section{Material necesario}
+Para la implementación de este proyecto ha sido necesario un ordenador para el desarrollo.
+En mi caso he utilizado mi ordenador personal, un Asus X550VX con un microprocesador de
+Intel i5-6300HQ con cuatro núcleos físicos y 8 GB de RAM. Como podemos ver es un ordenador
+no excesivamente potente y realmente con cualquier ordenador con un sistema Unix y un procesador
+medianamente potente puede realizarse sin problema el desarrollo. Si debemos mencionar
+que en cuanto a la memoria si han sido estrictamente necesarios los 8GB 
+ya que manejamos grandes cantidades de datos y en algunos casos se ha alcanzado un uso de 
+memoria de 7GB
+
+También ha sido necesario una conexión a internet, recurso indispensable para acceder a la
+documentación y paper de los algoritmos implementados. Además de proporcionar información
+adicional ya sea en temas teóricos o de implementación. Este material es de fácil acceso y
+en nuestro caso gratuito en la red de la universidad.
+
+
+

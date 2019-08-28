@@ -1,0 +1,35 @@
+\babel@toc {spanish}{}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de datos con ruido}}{20}{figure.1.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Planificaci\IeC {\'o}n del proyecto}}{25}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo uso de la distancia Mahalanobis}}{31}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de datos con ruido}}{33}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ejemplo detecci\IeC {\'o}n por densidad}}{36}{figure.4.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Abstracci\IeC {\'o}n de la clase general sklearn}}{39}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagrama de clases}}{41}{figure.5.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Abstracci\IeC {\'o}n de la clase general sklearn}}{44}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ejemplo de datos dispersos}}{49}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Ejemplo de funcionamiento de LDOF}}{50}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Ejemplo de situaci\IeC {\'o}n para proyecci\IeC {\'o}n aleatoria}}{52}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Etapas del algoritmo PINN}}{53}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Anomal\IeC {\'\i }as en diferentes subespacios}}{55}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Selecci\IeC {\'o}n de subespacios}}{56}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Ejemplo de anomal\IeC {\'\i }as}}{59}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Diferencia entre vectores ordenados por distancia}}{61}{figure.6.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces LOF test}}{64}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces LOOP test}}{65}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces LDOF test}}{65}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces PINN-LOF test}}{66}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces OUTRES test}}{66}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces ODIN test}}{67}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces MeanDIST test}}{67}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces kDIST test}}{68}{figure.7.8}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Valores AUC de la experimentaci\IeC {\'o}n}}{71}{figure.7.9}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

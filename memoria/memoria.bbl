@@ -1,0 +1,134 @@
+\begin{thebibliography}{10}
+
+\bibitem{aggarwalOutlierAnalysis2017}
+C.~C. Aggarwal, {\em Outlier {Analysis}}.
+\newblock New York: Springer-Verlag, 2017.
+
+\bibitem{ishimtsevConformalKNNAnomaly2017}
+V.~Ishimtsev, I.~Nazarov, A.~Bernstein, and E.~Burnaev, ``Conformal k-{NN}
+  {Anomaly} {Detector} for {Univariate} {Data} {Streams},'' {\em
+  arXiv:1706.03412 [cs, stat]}, June 2017.
+\newblock 00010 arXiv: 1706.03412.
+
+\bibitem{quotationsEugeneNathanielButler}
+S.~c. Quotations, ``Eugene {Nathaniel} {Butler} {Quotes}, {Quotations} \&
+  {Sayings} 2019.''
+
+\bibitem{kumarAnomalyBasedNetworkIntrusion2019}
+N.~Kumar and U.~Kumar, ``Anomaly-{Based} {Network} {Intrusion} {Detection}:
+  {An} {Outlier} {Detection} {Techniques},'' Mar. 2019.
+\newblock 00002.
+
+\bibitem{jabezIntrusionDetectionSystem2015}
+J.~Jabez and B.~Muthukumar, ``Intrusion {Detection} {System} ({IDS}): {Anomaly}
+  {Detection} {Using} {Outlier} {Detection} {Approach},'' {\em Procedia
+  Computer Science}, vol.~48, pp.~338--346, Dec. 2015.
+\newblock 00050.
+
+\bibitem{vIdentificationOutliersMedical2014}
+D.~V, S.~Kaliyaperumal, and M.~Mani, ``Identification of {Outliers} in
+  {Medical} {Diagnostic} {System} {Using} {Data} {Mining} {Techniques},''
+  vol.~2014, pp.~241--248, June 2014.
+\newblock 00014.
+
+\bibitem{gasparSystematicReviewOutliers2011}
+J.~d.~S. Gaspar, E.~Catumbela, B.~Marques, and A.~Freitas, ``A {Systematic}
+  {Review} of {Outliers} {Detection} {Techniques} in {Medical} {Data} -
+  {Preliminary} {Study},'' in {\em {HEALTHINF}}, 2011.
+\newblock 00003.
+
+\bibitem{porwalCreditCardFraud2018}
+U.~Porwal and S.~Mukund, ``Credit {Card} {Fraud} {Detection} in e-{Commerce}:
+  {An} {Outlier} {Detection} {Approach},'' {\em arXiv:1811.02196 [cs, stat]},
+  Nov. 2018.
+\newblock 00000 arXiv: 1811.02196.
+
+\bibitem{amrutad.pawarSurveyOutlierDetection2014}
+M.~Amruta D.~Pawar, P.~Prakash N.~Kalavadekar, and M.~Swapnali N.~Tambe, ``A
+  {Survey} on {Outlier} {Detection} {Techniques} for {Credit} {Card} {Fraud}
+  {Detection},'' {\em IOSR Journal of Computer Engineering}, vol.~16,
+  pp.~44--48, Jan. 2014.
+\newblock 00013.
+
+\bibitem{zhaoPyODPythonToolbox2019}
+Y.~Zhao, Z.~Nasrullah, and Z.~Li, ``{PyOD}: {A} {Python} {Toolbox} for
+  {Scalable} {Outlier} {Detection},'' {\em arXiv:1901.01588 [cs, stat]}, Jan.
+  2019.
+\newblock arXiv: 1901.01588.
+
+\bibitem{Miki97TFGOutlierDetectionHttps}
+``miki97/{TFG}-{OutlierDetection}
+  https://github.com/miki97/{TFG}-{OutlierDetection}.''
+
+\bibitem{PyDBODDistancesBased}
+``{PyDBOD}: {A} {Distances} {Based} {Outlier} {Detector} package
+  https://pypi.org/project/{PyDBOD}/.''
+
+\bibitem{APIReferenceScikitlearn}
+``{API} {Reference} — scikit-learn 0.21.2 documentation.''
+
+\bibitem{breunigLOFIdentifyingDensitybased2000}
+M.~M. Breunig, H.-P. Kriegel, R.~T. Ng, and J.~Sander, ``{LOF}: identifying
+  density-based local outliers,'' in {\em {ACM} sigmod record}, vol.~29,
+  pp.~93--104, ACM, 2000.
+
+\bibitem{kriegelLoOPLocalOutlier2009}
+H.-P. Kriegel, P.~Kröger, E.~Schubert, and A.~Zimek, ``{LoOP}: {Local}
+  {Outlier} {Probabilities},'' in {\em Proceedings of the 18th {ACM}
+  {Conference} on {Information} and {Knowledge} {Management}}, {CIKM} '09, (New
+  York, NY, USA), pp.~1649--1652, ACM, 2009.
+\newblock 00000 event-place: Hong Kong, China.
+
+\bibitem{zhangNewLocalDistancebased2009}
+K.~Zhang, M.~Hutter, and H.~Jin, ``A new local distance-based outlier detection
+  approach for scattered real-world data,'' in {\em Pacific-{Asia} {Conference}
+  on {Knowledge} {Discovery} and {Data} {Mining}}, pp.~813--822, Springer,
+  2009.
+\newblock 00261.
+
+\bibitem{vriesFindingLocalAnomalies2010}
+T.~d. Vries, S.~Chawla, and M.~E. Houle, ``Finding {Local} {Anomalies} in
+  {Very} {High} {Dimensional} {Space},'' in {\em 2010 {IEEE} {International}
+  {Conference} on {Data} {Mining}}, pp.~128--137, Dec. 2010.
+\newblock 00064.
+
+\bibitem{mullerAdaptiveOutliernessSubspace2010}
+E.~Müller, M.~Schiffer, and T.~Seidl, ``Adaptive {Outlierness} for {Subspace}
+  {Outlier} {Ranking},'' in {\em Proceedings of the 19th {ACM} {International}
+  {Conference} on {Information} and {Knowledge} {Management}}, {CIKM} '10, (New
+  York, NY, USA), pp.~1629--1632, ACM, 2010.
+\newblock event-place: Toronto, ON, Canada.
+
+\bibitem{hautamakiOutlierDetectionUsing2004}
+V.~Hautamaki, I.~Karkkainen, and P.~Franti, ``Outlier detection using k-nearest
+  neighbour graph,'' in {\em Proceedings of the 17th {International}
+  {Conference} on {Pattern} {Recognition}, 2004. {ICPR} 2004.}, vol.~3,
+  pp.~430--433 Vol.3, Aug. 2004.
+\newblock 00000.
+
+\bibitem{ramaswamyEfficientAlgorithmsMining2000}
+S.~Ramaswamy, R.~Rastogi, and K.~Shim, ``Efficient {Algorithms} for {Mining}
+  {Outliers} from {Large} {Data} {Sets},'' in {\em Proceedings of the 2000
+  {ACM} {SIGMOD} {International} {Conference} on {Management} of {Data}},
+  {SIGMOD} '00, (New York, NY, USA), pp.~427--438, ACM, 2000.
+\newblock 00000 event-place: Dallas, Texas, USA.
+
+\bibitem{zhaoPythonToolboxScalable2019}
+Y.~Zhao, ``A {Python} {Toolbox} for {Scalable} {Outlier} {Detection} ({Anomaly}
+  {Detection}): yzhao062/pyod,'' June 2019.
+\newblock 00000 original-date: 2017-10-03T20:29:04Z.
+
+\bibitem{papadimitriouLOCIFastOutlier2003}
+S.~Papadimitriou, H.~Kitagawa, P.~B. Gibbons, and C.~Faloutsos, ``{LOCI}: fast
+  outlier detection using the local correlation integral,'' in {\em Proceedings
+  19th {International} {Conference} on {Data} {Engineering} ({Cat}.
+  {No}.03CH37405)}, pp.~315--326, Mar. 2003.
+
+\bibitem{alcala-fdezKEELSoftwareTool2009}
+J.~Alcalá-Fdez, L.~Sánchez, S.~García, M.~J. del Jesus, S.~Ventura, J.~M.
+  Garrell, J.~Otero, C.~Romero, J.~Bacardit, V.~M. Rivas, J.~C. Fernández, and
+  F.~Herrera, ``{KEEL}: a software tool to assess evolutionary algorithms for
+  data mining problems,'' {\em Soft Comput}, vol.~13, pp.~307--318, Feb. 2009.
+\newblock 01026.
+
+\end{thebibliography}

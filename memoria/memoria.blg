@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: memoria.aux
+The style file: ieeetr.bst
+Database file #1: TFG-MiguelAngelRobles.bib.bib
+Warning--empty booktitle in kumarAnomalyBasedNetworkIntrusion2019
+Warning--empty journal in vIdentificationOutliersMedical2014
+You've used 23 entries,
+            1876 wiz_defined-function locations,
+            634 strings with 9104 characters,
+and the built_in function-call counts, 6199 in all, are:
+= -- 615
+> -- 235
+< -- 0
++ -- 88
+- -- 65
+* -- 433
+:= -- 842
+add.period$ -- 36
+call.type$ -- 23
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 308
+empty$ -- 617
+format.name$ -- 65
+if$ -- 1514
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 19
+newline$ -- 89
+num.names$ -- 20
+pop$ -- 93
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 232
+stack$ -- 0
+substring$ -- 405
+swap$ -- 112
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 56
+width$ -- 25
+write$ -- 234
+(There were 2 warnings)
