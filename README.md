@@ -34,7 +34,7 @@ Local Outlier Factor (LOF), o en español factor de valor atı́pico local, es u
 
 <dl class="function">
 
-<dt id="LOF">`LOF`<span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LOF "Enlazar permanentemente con esta definición")</dt>
+<dt id="LOF"> LOF <span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LOF "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -66,7 +66,7 @@ objeto de la clase LOF
 
 <dl class="function">
 
-<dt id="fit_predict">`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span>[¶](#fit_predict "Enlazar permanentemente con esta definición")</dt>
+<dt id="fit_predict"> fit_predict<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span>[¶](#fit_predict "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -106,7 +106,7 @@ Local Outlier Probability (LoOP), esta técnica combina varios conceptos. En pri
 
 <dl class="function">
 
-<dt id="LOOP">`LOOP`<span class="sig-paren">(</span>_k = 20_, _lamda=3_<span class="sig-paren">)</span>[¶](#LOOP "Enlazar permanentemente con esta definición")</dt>
+<dt id="LOOP"> LOOP <span class="sig-paren">(</span>_k = 20_, _lamda=3_<span class="sig-paren">)</span>[¶](#LOOP "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -140,7 +140,7 @@ objeto de la clase LOOP
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -180,7 +180,7 @@ Local Outlier Probability (LoOP), utiliza la distancia relativa de un objeto a s
 
 <dl class="function">
 
-<dt id="LDOF">`LDOF`<span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LDOF "Enlazar permanentemente con esta definición")</dt>
+<dt id="LDOF"> LDOF <span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LDOF "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -212,7 +212,7 @@ objeto de la clase LOOP
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -252,7 +252,7 @@ Projection-Indexed Nearest-Neighbour (PINN), en este algoritmo se propone un mé
 
 <dl class="function">
 
-<dt>`PINN-LOF(k = 20, t=2, s=1, h=20)`</dt>
+<dt> PINN-LOF(k = 20, t=2, s=1, h=20) </dt>
 
 <dd>
 
@@ -290,7 +290,7 @@ objeto de la clase PINN-LOF
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -330,7 +330,7 @@ Outres es un algoritmo que propone desarrollar una puntuación de anomalı́as b
 
 <dl class="function">
 
-<dt id="OUTRES">`OUTRES`<span class="sig-paren">(</span>_epsilon=15_, _alpha=0.01_<span class="sig-paren">)</span>[¶](#OUTRES "Enlazar permanentemente con esta definición")</dt>
+<dt id="OUTRES"> OUTRES <span class="sig-paren">(</span>_epsilon=15_, _alpha=0.01_<span class="sig-paren">)</span>[¶](#OUTRES "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -364,7 +364,7 @@ objeto de la clase OUTRES
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -404,7 +404,7 @@ Outlier Detection using Indegree Number (ODIN),es un algoritmo que hace uso del 
 
 <dl class="function">
 
-<dt id="ODIN">`ODIN`<span class="sig-paren">(</span>_k=20_, _t=0.01_<span class="sig-paren">)</span>[¶](#ODIN "Enlazar permanentemente con esta definición")</dt>
+<dt id="ODIN"> ODIN <span class="sig-paren">(</span>_k=20_, _t=0.01_<span class="sig-paren">)</span>[¶](#ODIN "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -438,7 +438,7 @@ objeto de la clase ODIN
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -478,7 +478,7 @@ El algoritmo MeanDIST usa la la media de las distancias en su vecindario para or
 
 <dl class="function">
 
-<dt id="MeanDIST">`MeanDIST`<span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#MeanDIST "Enlazar permanentemente con esta definición")</dt>
+<dt id="MeanDIST"> MeanDIST <span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#MeanDIST "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -512,7 +512,7 @@ objeto de la clase MeanDIST
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -552,7 +552,7 @@ El algoritmo KDIST el máximo de las distancias a sus k-vecinos más cercanos pa
 
 <dl class="function">
 
-<dt id="KDIST">`KDIST`<span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#KDIST "Enlazar permanentemente con esta definición")</dt>
+<dt id="KDIST"> KDIST <span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#KDIST "Enlazar permanentemente con esta definición")</dt>
 
 <dd>
 
@@ -586,7 +586,7 @@ objeto de la clase KDIST
 
 <dl class="function">
 
-<dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+<dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
 
 <dd>
 
@@ -618,7 +618,7 @@ numpy.array de decisión 1-0
 
 <dl class="function">
 
-<dt id="enumerate">`enumerate`<span class="sig-paren">(</span>_sequence_<span class="optional">[</span>, _start=0_<span class="optional">]</span><span class="sig-paren">)</span>[¶](#enumerate "Enlazar permanentemente con esta definición")</dt>
+<dt id="enumerate"> enumerate <span class="sig-paren">(</span>_sequence_<span class="optional">[</span>, _start=0_<span class="optional">]</span><span class="sig-paren">)</span>[¶](#enumerate "Enlazar permanentemente con esta definición")</dt>
 
 </dl>
 
