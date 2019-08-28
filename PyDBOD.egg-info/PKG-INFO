@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PyDBOD
-Version: 1.0
+Version: 1.1
 Summary: A Distances Based Outlier Detector package
 Home-page: https://github.com/miki97/TFG-OutlierDetection
 Author: Miguel Ángel López Robles
@@ -25,6 +25,12 @@ Description: <div class="document">
         
         Bienvenido a PyDBOD, la biblioteca de Python para la detección de anomalías usando algoritmos basados en distancias. En esta bibliotica tienes una amplia selección de algoritmos los cuales vamos a documentar a continuación. El uso de todos se reduce a la creación de un objeto de la clase respectiva y el uso del método **fit_predict**.
         
+        Para instalar el paquete o obtener una distribución usar el repositorio en github o en PyPI:
+        
+        <https://github.com/miki97/TFG-OutlierDetection>
+        
+        <https://pypi.org/project/PyDBOD/>
+        
         </div>
         
         <div class="section" id="lof">
@@ -35,7 +41,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="LOF">`LOF`<span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LOF "Enlazar permanentemente con esta definición")</dt>
+        <dt id="LOF"> LOF <span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LOF "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -67,7 +73,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="fit_predict">`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span>[¶](#fit_predict "Enlazar permanentemente con esta definición")</dt>
+        <dt id="fit_predict"> fit_predict<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span>[¶](#fit_predict "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -107,7 +113,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="LOOP">`LOOP`<span class="sig-paren">(</span>_k = 20_, _lamda=3_<span class="sig-paren">)</span>[¶](#LOOP "Enlazar permanentemente con esta definición")</dt>
+        <dt id="LOOP"> LOOP <span class="sig-paren">(</span>_k = 20_, _lamda=3_<span class="sig-paren">)</span>[¶](#LOOP "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -141,7 +147,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -181,7 +187,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="LDOF">`LDOF`<span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LDOF "Enlazar permanentemente con esta definición")</dt>
+        <dt id="LDOF"> LDOF <span class="sig-paren">(</span>_k = 20_<span class="sig-paren">)</span>[¶](#LDOF "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -213,7 +219,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -253,7 +259,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`PINN-LOF(k = 20, t=2, s=1, h=20)`</dt>
+        <dt> PINN-LOF(k = 20, t=2, s=1, h=20) </dt>
         
         <dd>
         
@@ -291,7 +297,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -331,7 +337,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="OUTRES">`OUTRES`<span class="sig-paren">(</span>_epsilon=15_, _alpha=0.01_<span class="sig-paren">)</span>[¶](#OUTRES "Enlazar permanentemente con esta definición")</dt>
+        <dt id="OUTRES"> OUTRES <span class="sig-paren">(</span>_epsilon=15_, _alpha=0.01_<span class="sig-paren">)</span>[¶](#OUTRES "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -365,7 +371,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -405,7 +411,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="ODIN">`ODIN`<span class="sig-paren">(</span>_k=20_, _t=0.01_<span class="sig-paren">)</span>[¶](#ODIN "Enlazar permanentemente con esta definición")</dt>
+        <dt id="ODIN"> ODIN <span class="sig-paren">(</span>_k=20_, _t=0.01_<span class="sig-paren">)</span>[¶](#ODIN "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -439,7 +445,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -479,7 +485,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="MeanDIST">`MeanDIST`<span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#MeanDIST "Enlazar permanentemente con esta definición")</dt>
+        <dt id="MeanDIST"> MeanDIST <span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#MeanDIST "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -513,7 +519,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -553,7 +559,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="KDIST">`KDIST`<span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#KDIST "Enlazar permanentemente con esta definición")</dt>
+        <dt id="KDIST"> KDIST <span class="sig-paren">(</span>_k=20_, _t=1.5_<span class="sig-paren">)</span>[¶](#KDIST "Enlazar permanentemente con esta definición")</dt>
         
         <dd>
         
@@ -587,7 +593,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt>`fit_predict`<span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
+        <dt> fit_predict <span class="sig-paren">(</span>_data_<span class="sig-paren">)</span></dt>
         
         <dd>
         
@@ -619,7 +625,7 @@ Description: <div class="document">
         
         <dl class="function">
         
-        <dt id="enumerate">`enumerate`<span class="sig-paren">(</span>_sequence_<span class="optional">[</span>, _start=0_<span class="optional">]</span><span class="sig-paren">)</span>[¶](#enumerate "Enlazar permanentemente con esta definición")</dt>
+        <dt id="enumerate"> enumerate <span class="sig-paren">(</span>_sequence_<span class="optional">[</span>, _start=0_<span class="optional">]</span><span class="sig-paren">)</span>[¶](#enumerate "Enlazar permanentemente con esta definición")</dt>
         
         </dl>
         

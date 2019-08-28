@@ -3,7 +3,7 @@ import setuptools
 
 setup(
     name='PyDBOD',
-    version='1.1',
+    version='1.0',
     author="Miguel Ángel López Robles",
     description="A Distances Based Outlier Detector package",
     packages=setuptools.find_packages(),
