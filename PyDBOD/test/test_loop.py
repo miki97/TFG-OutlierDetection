@@ -96,7 +96,7 @@ data = load_data("./data/shuttle-c0-vs-c4.dat")
 #data = load_data("./data/glass5.dat", sep = ', ')
 #data = load_data("./data/ecoli-0-1-3-7_vs_2-6.dat")
 #data = load_data("./data/yeast5.dat", sep = ', ')
-loop = LOOP(lamda=3)
+loop = LOOP(k=210, lamda= 3)
 coef = loop.fit_predict(data[:,:-1])
 
 

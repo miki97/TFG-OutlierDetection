@@ -100,7 +100,7 @@ data = load_data("./data/shuttle-c0-vs-c4.dat")  # k = 20
 #data = load_data("./data/glass5.dat", sep = ', ') #k=19
 #data = load_data("./data/ecoli-0-1-3-7_vs_2-6.dat") #k=25
 #data = load_data("./data/yeast5.dat", sep = ', ')
-kdist = KDIST(k=20, t=0.001)
+kdist = KDIST(k=210, t=0.0008)
 coef = kdist.fit_predict(data[:,:-1])
 #coef_n = (coef - coef.min()) / (coef.max() - coef.min())
 #print(coef)

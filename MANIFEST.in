@@ -2,5 +2,9 @@
 include setup.py
 include PyDBOD/lof.py
 include PyDBOD/ldof.py
-include PyDBOD/lood.py
+include PyDBOD/loop.py
+include PyDBOD/outres.py
+include PyDBOD/odin.py
+include PyDBOD/meadist.py
+include PyDBOD/kdist.py
 recursive-include PyDBOD *.dat

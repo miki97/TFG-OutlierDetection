@@ -17,13 +17,6 @@ algoritmos basados en distancias. En esta bibliotica tienes una amplia selecció
 algoritmos los cuales vamos a documentar a continuación. El uso de todos se reduce a
 la creación de un objeto de la clase respectiva y el uso del método **fit_predict**.
 
-Para instalar el paquete o obtener una distribución usar el repositorio en github o 
-en PyPI;
-
-https://github.com/miki97/TFG-OutlierDetection
-
-https://pypi.org/project/PyDBOD/
-
 
 LOF
 ==================

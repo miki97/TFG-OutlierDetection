@@ -97,7 +97,7 @@ data = load_data("./data/shuttle-c0-vs-c4.dat")  # k = 20
 #data = load_data("./data/yeast5.dat", sep = ', ') #65,65
 
 
-ldof = LDOF(k = 22)
+ldof = LDOF(k=240)
 coef = ldof.fit_predict(data[:,:-1])
 coef_n = (coef - coef.min()) / (coef.max() - coef.min())
 #print(coef)

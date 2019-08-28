@@ -1,6 +1,6 @@
 
 #from PyDBOD import load
-from PyDBOD import load, lof, loop, ldof, pinn_lof, outres
+from PyDBOD import load, lof, loop, ldof, pinn_lof, outres, odin, meandist, kdist
 import numpy as np
 from sklearn.metrics import roc_curve, auc
 from pyod.models.loci import LOCI
@@ -64,7 +64,33 @@ file_result.append(roc_auc)
 '''
 file_result.append(0)
 
-'''
+#ODIN
+algorith = odin.ODIN(k=45, t=24)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=41, t=0.04)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=60, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -74,11 +100,10 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 
 result = np.array(file_result)
-
-
+print('hi')
 ##############################################################################
 ## file1
 
@@ -127,7 +152,33 @@ file_result.append(roc_auc)
 '''
 file_result.append(0)
 
-'''
+#ODIN
+algorith = odin.ODIN(k=22, t=6)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=20, t=0.08)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=41, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -137,10 +188,10 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 
 result = np.vstack((result,np.array(file_result)))
-
+print('hi')
 
 
 ##############################################################################
@@ -190,7 +241,35 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+
+#ODIN
+algorith = odin.ODIN(k=30, t=20)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=20, t=0.7)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=22, t=1.4)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -200,9 +279,10 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 
 result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 ##############################################################################
 ## file3
@@ -251,7 +331,34 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN
+algorith = odin.ODIN(k=142, t=45)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=140, t=0.2)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=100, t=0.08)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -261,9 +368,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 ##############################################################################
 ## file4
@@ -312,7 +419,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN 
+algorith = odin.ODIN(k=36, t=10)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=55, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=80, t=0.08)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -322,9 +455,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 ##############################################################################
 ## file5
 
@@ -372,7 +505,34 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN 
+algorith = odin.ODIN(k=30, t=18)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=30, t=1.2)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=20, t=1.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -382,9 +542,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 
 ##############################################################################
@@ -434,7 +594,35 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN 
+algorith = odin.ODIN(k=21, t=9)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=22, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=20, t=0.12)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -444,9 +632,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 
 ##############################################################################
@@ -497,7 +685,34 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN 125
+algorith = odin.ODIN(k=332, t=100)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=300, t=0.0008)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=300, t=0.0015)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -507,11 +722,10 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 
 result = np.vstack((result,np.array(file_result)))
-
-
+print('hi')
 
 
 ##############################################################################
@@ -563,7 +777,32 @@ file_result.append(roc_auc)
 '''
 file_result.append(0)
 
-'''
+#ODIN 
+algorith = odin.ODIN(k=600, t=124)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=210, t=0.0008)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=210, t=0.0008)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -573,10 +812,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 result = np.vstack((result,np.array(file_result)))
-
-
+print('hi')
 
 ##############################################################################
 ## file9
@@ -626,7 +864,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN 
+algorith = odin.ODIN(k=35, t=7)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=20, t=0.0008)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=20, t=0.0008)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -636,9 +900,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 ##############################################################################
 ## file10
@@ -688,7 +952,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN 
+algorith = odin.ODIN(k=150, t=91)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=95, t=0.5)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=79, t=0.8)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -698,9 +988,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 ##############################################################################
 ## file11
 
@@ -749,7 +1039,34 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN 
+algorith = odin.ODIN(k=100, t=52)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=53, t=1.5)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=53, t=1.5)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -759,9 +1076,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 ##############################################################################
 ## file12
@@ -811,7 +1128,35 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN
+algorith = odin.ODIN(k=117, t=41)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=155, t=0.01)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=155, t=0.01)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -821,8 +1166,10 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 result = np.vstack((result,np.array(file_result)))
+print('hi')
+
 
 
 ##############################################################################
@@ -873,7 +1220,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN
+algorith = odin.ODIN(k=312, t=208)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=316, t=0.01)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=316, t=0.02)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -883,10 +1256,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 result = np.vstack((result,np.array(file_result)))
-
-
+print('hi')
 
 ##############################################################################
 ## file14
@@ -936,7 +1308,34 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN
+algorith = odin.ODIN(k=180, t=129)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=66, t=0.007)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=56, t=0.008)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -946,8 +1345,10 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 result = np.vstack((result,np.array(file_result)))
+print('hi')
+
 
 
 ##############################################################################
@@ -998,7 +1399,35 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN
+algorith = odin.ODIN(k=75, t=30)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=190, t=0.025)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=190, t=0.02)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -1008,9 +1437,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 ##############################################################################
 ## file16
@@ -1060,7 +1489,35 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+
+#ODIN
+algorith = odin.ODIN(k=50, t=30)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=22, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=22, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -1070,9 +1527,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 ##############################################################################
 ## file17
 
@@ -1121,7 +1578,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN
+algorith = odin.ODIN(k=50, t=29)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=95, t=0.08)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=96, t=0.12)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -1131,8 +1614,11 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 result = np.vstack((result,np.array(file_result)))
+print('hi')
+
+
 
 ##############################################################################
 ## file18
@@ -1182,7 +1668,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN
+algorith = odin.ODIN(k=295, t=157)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=210, t=0.024)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=250, t=0.031)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -1192,8 +1704,9 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
+
 result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 ##############################################################################
 ## file19
@@ -1243,7 +1756,33 @@ roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
 '''
 file_result.append(0)
-'''
+
+#ODIN
+algorith = odin.ODIN(k=55, t=13)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
+#MeanDIST
+algorith = meandist.MeanDIST(k=22, t=0.1)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+#kDIST
+algorith = kdist.KDIST(k=30, t=0.032)
+coef = algorith.fit_predict(data[:,:-1])
+coef = (coef - coef.min()) / (coef.max() - coef.min())
+fpr, tpr, _ = roc_curve(data[:,-1],coef)
+roc_auc = auc(fpr, tpr)
+file_result.append(roc_auc)
+
+
 #LOCI
 clf = LOCI()
 clf.fit(data[:,:-1])
@@ -1253,16 +1792,18 @@ coef = (coef - coef.min()) / (coef.max() - coef.min())
 fpr, tpr, _ = roc_curve(data[:,-1],coef)
 roc_auc = auc(fpr, tpr)
 file_result.append(roc_auc)
-'''
-result = np.vstack((result,np.array(file_result)))
 
+result = np.vstack((result,np.array(file_result)))
+print('hi')
 
 import pandas as pd
 
 #dataset = pd.DataFrame({ 'Fichero':files, 'LOF':result[:,0],'LOOP':result[:,1],'LDOF':result[:,2],'PINN-LOF':result[:,3], 'OUTRES':np.repeat('-',result.shape[0]),
  #                       'LOCI':result[:,5] })
 
-dataset = pd.DataFrame({ 'Fichero':files, 'LOF':result[:,0],'LOOP':result[:,1],'LDOF':result[:,2],'PINN-LOF':result[:,3], 'OUTRES':np.repeat('-',result.shape[0])})
+dataset = pd.DataFrame({ 'Fichero':files, 'LOF':result[:,0],'LOOP':result[:,1],'LDOF':result[:,2],'PINN-LOF':result[:,3], 'OUTRES':np.repeat('-',result.shape[0]), 
+'ODIN':result[:,5], 'MeanDIST':result[:,6], 'kDIST':result[:,7], 'LOCI':result[:,8] })
+
 #dataset['OUTRES'] = np.repeat('-',result.shape[0])
 
 

@@ -8,8 +8,9 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import DistanceMetric
 import matplotlib.pyplot as plt
+from PyDBOD.base import Base
 
-
+'''
 # function to load a data file 
 def load_data(data_file, sep = ','):
     f = open(data_file,'r')
@@ -82,12 +83,7 @@ X_inliers = np.r_[X_inliers + 2, X_inliers - 2]
 X_outliers = np.random.uniform(low=-4, high=4, size=(20, 2))
 X = np.r_[X_inliers, X_outliers]
 
-'''
-for i in range(2,10):
-    if True in ldof(X,k=i):
-        print("hola")
-        print(i)
-'''
+
 # take coef and see it
 coef = ldof(X,k=7)
 
@@ -116,10 +112,47 @@ plt.show()
 
 data = load_data("shuttle-c0-vs-c4.dat")
 
-'''
-for i in range(2,10):
-    if True in ldof(data[:,:-1],k=i):
-        print("hola")
-        print(i)
+
+
 '''
 
+
+class LDOF(Base):
+    def __init__(self, k=20, n = 10):
+        self.k = k
+        self.n = n
+    
+    def fit_predict(self, data):
+        
+        nbrs = NearestNeighbors(n_neighbors=self.k, algorithm='ball_tree').fit(data)
+        distances, indices = nbrs.kneighbors(data)
+
+        #calculate KNN distace of x_p,excluding x_p
+        d_xp = np.average(distances[:,1:],axis =1)
+        
+
+        #calculate KNN inner distance of x_p
+        #we have calculated the k-nerarest distance of the element
+        #but we don't know if they are reciprocal neighbors. For this
+        #reason we have to recalculate distances between de set N_p
+
+        inner_distances = [nbrs.kneighbors(data[i])[0] for i in indices]
+
+        inner_distances = np.array(inner_distances)
+
+        #remove self distances ( i != i)
+        inner_distances = inner_distances[:,:,1:]
+
+        
+
+        D_xp = [ np.sum(elemt) for elemt in inner_distances]
+        D_xp = np.array(D_xp)
+        D_xp = D_xp / ( self.k*(self.k-1))
+        #print(D_xp)
+        #print(D_xp.shape)
+
+        # calculate the LDOF coeficients
+        ldof = d_xp / D_xp
+        
+        
+        return ldof

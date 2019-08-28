@@ -17,11 +17,18 @@ algoritmos basados en distancias. En esta bibliotica tienes una amplia selecció
 algoritmos los cuales vamos a documentar a continuación. El uso de todos se reduce a
 la creación de un objeto de la clase respectiva y el uso del método **fit_predict**.
 
+Para instalar el paquete o obtener una distribución usar el repositorio en github o 
+en PyPI;
+
+https://github.com/miki97/TFG-OutlierDetection
+
+https://pypi.org/project/PyDBOD/
+
 
 LOF
 ==================
-Local Outlier Factor (LOF), o en español factor de valor atı́pico local, es
-una cuantificación del valor atı́pico de un punto perteneciente al conjunto de
+Local Outlier Factor (LOF), o en español factor de valor atıípico local, es
+una cuantificación del valor atípico de un punto perteneciente al conjunto de
 datos. Esta cuantificación es capaz de ajustar las variaciones en las densidades
 locales.
 
@@ -47,7 +54,7 @@ LOOP
 Local Outlier Probability (LoOP), esta técnica combina varios conceptos.
 En primer lugar, la idea de localidad, los algoritmos basados en densidad
 como LOF. Por otro lado, LOCI
-con conceptos probabilı́sticos.
+con conceptos probabilıísticos.
 
 .. py:function:: LOOP(k = 20, lamda=3)
 
@@ -93,7 +100,7 @@ de su vecindario disperso.
 PINN-LOF
 ==================
 Projection-Indexed Nearest-Neighbour (PINN), en este algoritmo se
-propone un método de detección de valores atı́picos
+propone un método de detección de valores atıípicos
 locales proyectivo basado en LOF.
 
 .. py:function:: PINN-LOF(k = 20, t=2, s=1, h=20)
@@ -119,7 +126,7 @@ locales proyectivo basado en LOF.
 
 OUTRES
 ==================
-Outres es un algoritmo que propone desarrollar una puntuación de anomalı́as basada
+Outres es un algoritmo que propone desarrollar una puntuación de anomalías basada
 en la desviación de objetos en las proyecciones subespaciales. Para la selección de 
 dichos subespacios se analiza la uniformidad de los datos en ellos.
 
@@ -206,8 +213,6 @@ seleccionar los que más se desvian.
     :rtype: numpy.array de decisión 1-0 
 
 
-
-.. py:function:: enumerate(sequence[, start=0])
 
 * :ref:`genindex`
 * :ref:`modindex`

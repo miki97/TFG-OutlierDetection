@@ -18,6 +18,12 @@
 
 Bienvenido a PyDBOD, la biblioteca de Python para la detección de anomalías usando algoritmos basados en distancias. En esta bibliotica tienes una amplia selección de algoritmos los cuales vamos a documentar a continuación. El uso de todos se reduce a la creación de un objeto de la clase respectiva y el uso del método **fit_predict**.
 
+Para instalar el paquete o obtener una distribución usar el repositorio en github o en PyPI:
+
+<https://github.com/miki97/TFG-OutlierDetection>
+
+<https://pypi.org/project/PyDBOD/>
+
 </div>
 
 <div class="section" id="lof">

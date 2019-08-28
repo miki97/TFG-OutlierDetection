@@ -97,7 +97,7 @@ data = load_data("./data/shuttle-c0-vs-c4.dat")  # k = 20
 #data = load_data("./data/yeast5.dat", sep = ', ') #65,65
 
 
-pinn_lof = PINN_LOF(k=65, h = 65,s = 1)
+pinn_lof = PINN_LOF(k=200, t=2, s=2, h =210)
 coef = pinn_lof.fit_predict(data[:,:-1])
 coef_n = (coef - coef.min()) / (coef.max() - coef.min())
 #print(coef)
