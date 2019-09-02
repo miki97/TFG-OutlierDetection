@@ -1,8 +1,8 @@
-\chapter{Pruebas}
+\chapter{Análisis experimental}
 En este capítulo vamos a presentar las diferentes pruebas y la experimentación
 realizada con los algoritmos implementados
 
-\section{Pruebas}
+\section{Pruebas de comportamiento}
 En primer lugar, vamos a comentar las pruebas realizadas a cada algoritmo
 para confirmar su correcto funcionamiento y para observar con más claridad
 su comportamiento. Para ello todos los algoritmos han sido probados con un
@@ -149,7 +149,7 @@ Los resultados de dichas pruebas los tenemos en la tercera figura correspondient
 algoritmo. Como podemos ver los resultados obtenidos en los datos sintéticos se mantienen,
 y seguimos teniendo unos resultados fantásticos.
 
-La sorpresa para nosotros llegó con el mal desempeño de \textbf{OUTRES}. En primer lugar
+La sorpresa llegó con el mal desempeño de \textbf{OUTRES}. En primer lugar
 tenemos que comentar que a pesar de conocer el hecho de su alta complejidad lo que podía
 suponer un alto coste en tiempo, confiábamos en que la técnica de poda hiciera este algoritmo
 útil ya que el procedimiento y técnica tenían una idea buena. En la práctica esta idea 
@@ -174,7 +174,7 @@ de los algoritmos seleccionados queda demostrado que es correcta y robusta.
 
 
 
-\section{Experimentación}
+\section{Estudio experimental para problemas con alto desequilibrio}
 En este punto del trabajo ya disponemos de la funcionalidad de nuestra biblioteca por lo que 
 una vez que hemos ejemplificado el uso de los algoritmos, realizamos una experimentación 
 para probar el comportamiento de nuestros algoritmos frente a 
@@ -237,7 +237,7 @@ Como podemos ver en general los resultados son muy variados y fuertemente depend
 de datos al que se enfrenta. Vamos a comentar ciertas cosas que consideramos ciertamente 
 interesantes.
 
-En primer lugar, podemos ver como los resultados entre los 6 algoritmos de nuestra biblioteca
+En primer lugar, podemos ver como los resultados entre los 7 algoritmos de nuestra biblioteca
  son similares en cada conjunto de 
 datos. En primer lugar tenemos que mencionar que en general \textbf{LDOF} no consigue mejores  
 resultados que el resto de algoritmos en ningún conjunto de datos. A pesar de ello tampoco podemos 
@@ -296,8 +296,8 @@ ya que existen casos para los cuales uno tiene un mejor desempeño que el otro. 
 como un enfoque tan sencillo puede conseguir resultados bastante buenos, aunque queda claro que si queremos 
 ser más precisos y conseguir resultados mejores, son enfoques que pueden no ser suficientes. 
 
-Por otro lado, nos deja un mal sabor de boca el comportamiento de Con \textbf{OUTRES} 
-ya que los conceptos en los que se basa son similares a Con \textbf{PINN-LOF}, 
+Por otro lado, nos sorprende el comportamiento de \textbf{OUTRES} 
+ya que los conceptos en los que se basa son similares a \textbf{PINN-LOF}, 
 la búsqueda de anomalías en subespacios. En \textbf{PINN-LOF} hemos visto como incluso usando 
 una selección aleatoria esto puede generar muy buenos resultados y que realmente es necesaria esa  
 búsqueda en subespacios, cuando la dimensión crece, no solo por eficiencia sino también por realizar 

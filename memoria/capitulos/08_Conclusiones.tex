@@ -1,6 +1,6 @@
-\chapter{Conclusiones} 
-
-En este proyecto se ha implementado una biblioteca con 5 algoritmos 
+\chapter{Conclusiones y trabajo futuro} 
+\section(Conclusiones)
+En este proyecto se ha implementado una biblioteca con 8 algoritmos 
 de detección de anomalías basados en proximidad. Cada uno de ellos  
 busca afrontar el problema y sus inconvenientes desde una perspectiva 
 y técnica diferente. En el momento de esta publicación no existe  
@@ -14,7 +14,14 @@ interesante según los datos a los que nos enfrentamos. También hemos
 visto como el problema de la detección de anomalías tiene una clara  
 aplicación al mundo real y nuestros algoritmos pueden aplicarse a  
 conjuntos de datos reales. 
- 
+
+Si tuviéramos que decantarnos porque 
+algoritmos recomendar, podemos decir que el algoritmo más estable
+y que puede ofrecernos una solución de calidad, es \textbf{LOF}.
+Por otro lado recomendamos \textbf{PINN-LOF} ya que aunque depende de la aleatoriedad
+y es difícil de ajustar, puede ofrecernos muy buenos resultados con la búsqueda en 
+subespacios. Por último también podemos destacar \textbf{ODIN}, un algoritmo
+fácil de interpretar y que ofrece resultados muy competentes.
 
 En conclusión, hemos desarrollado una biblioteca o herramienta que cumple 
 los requisitos que nos planeábamos al comienzo del estudio, buenos resultados 
@@ -25,9 +32,11 @@ Como trabajos futuros se podrían seguir implementando más algoritmos
 para aumentar la paleta de posibilidades para aplicar ante los diferentes 
 problemas que les pueden surgir a los usuarios finales de nuestra biblioteca. 
 
-También podríamos ampliar el campo de técnicas incluidas e introducir  
-algoritmos de otros enfoques como puede ser técnicas estadísticas, que  
-aumentarían la utilidad y funcionalidad de nuestra biblioteca.
+Por otra parte, cabe la extensión de los algoritmos de Big Data, que requiere 
+el rediseño en un entorno de datos distribuidos bajo el paradigma de MapREduce, 
+donde cada map (subconjunto de datos) contiene un subconjunto disjunto de datos del original.  
+Esto requiere un rediseño de los algoritmos para afrontar la etapa REduce de fusión de 
+información extraída de cada MAP.
 
 
 

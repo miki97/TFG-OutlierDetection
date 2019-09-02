@@ -27,9 +27,12 @@
 \contentsline {section}{\numberline {6.5}OUTRES}{54}{section.6.5}
 \contentsline {section}{\numberline {6.6}ODIN}{58}{section.6.6}
 \contentsline {section}{\numberline {6.7}MeanDIST y KDIST}{60}{section.6.7}
-\contentsline {chapter}{\numberline {7}Pruebas}{63}{chapter.7}
-\contentsline {section}{\numberline {7.1}Pruebas}{63}{section.7.1}
-\contentsline {section}{\numberline {7.2}Experimentaci\IeC {\'o}n}{69}{section.7.2}
-\contentsline {chapter}{\numberline {8}Conclusiones}{75}{chapter.8}
-\contentsline {section}{\numberline {8.1}Trabajo futuro}{75}{section.8.1}
-\contentsline {chapter}{\numberline {9}Ap\IeC {\'e}ndice}{77}{chapter.9}
+\contentsline {chapter}{\numberline {7}An\IeC {\'a}lisis experimental}{63}{chapter.7}
+\contentsline {section}{\numberline {7.1}Pruebas de comportamiento}{63}{section.7.1}
+\contentsline {section}{\numberline {7.2}Estudio experimental para problemas con alto desequilibrio}{69}{section.7.2}
+\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{75}{chapter.8}
+\contentsline {section}{\numberline {8.1}(}{75}{section.8.1}
+\contentsline {section}{\numberline {8.2}Trabajo futuro}{76}{section.8.2}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{76}{section.8.2}
+\contentsline {chapter}{\numberline {9}Ap\IeC {\'e}ndice}{81}{chapter.9}
+\contentsline {chapter}{Manual PyDBOD}{81}{chapter.9}

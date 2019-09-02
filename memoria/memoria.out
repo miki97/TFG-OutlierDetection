@@ -26,9 +26,12 @@
 \BOOKMARK [1][-]{section.6.5}{OUTRES}{chapter.6}% 26
 \BOOKMARK [1][-]{section.6.6}{ODIN}{chapter.6}% 27
 \BOOKMARK [1][-]{section.6.7}{MeanDIST y KDIST}{chapter.6}% 28
-\BOOKMARK [0][-]{chapter.7}{Pruebas}{}% 29
-\BOOKMARK [1][-]{section.7.1}{Pruebas}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.2}{Experimentaci\363n}{chapter.7}% 31
-\BOOKMARK [0][-]{chapter.8}{Conclusiones}{}% 32
-\BOOKMARK [1][-]{section.8.1}{Trabajo futuro}{chapter.8}% 33
-\BOOKMARK [0][-]{chapter.9}{Ap\351ndice}{}% 34
+\BOOKMARK [0][-]{chapter.7}{An\341lisis experimental}{}% 29
+\BOOKMARK [1][-]{section.7.1}{Pruebas de comportamiento}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.2}{Estudio experimental para problemas con alto desequilibrio}{chapter.7}% 31
+\BOOKMARK [0][-]{chapter.8}{Conclusiones y trabajo futuro}{}% 32
+\BOOKMARK [1][-]{section.8.1}{\(}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.2}{Trabajo futuro}{chapter.8}% 34
+\BOOKMARK [0][-]{section.8.2}{Bibliograf\355a}{}% 35
+\BOOKMARK [0][-]{chapter.9}{Ap\351ndice}{}% 36
+\BOOKMARK [0][-]{chapter.9}{Manual PyDBOD}{}% 37
